@@ -62,9 +62,9 @@ class Balance{
             }
         }
         this.currentServer = (this.currentServer + 1) % lengthWithWeight
-        const indexConnection = this.servers.indexOf(newServers[this.currentServer]);
-        this.connections[indexConnection]++;
         this.nameCurrentServer = newServers[this.currentServer];
+        const indexConnection = this.servers.indexOf(this.nameCurrentServer);
+        this.connections[indexConnection]++;
     }
 
     stickySession(sessionId) {
